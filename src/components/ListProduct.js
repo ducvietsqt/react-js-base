@@ -27,11 +27,15 @@ export default class ListProduct extends Component {
         fieldName: 'name',
         label: 'Product Name',
         component: CellTextField,
+        required: true,
+        maxLength: 50,
       },
       {
         fieldName: 'sku',
         label: 'SKU',
         component: CellTextField,
+        required: true,
+        maxLength: 20,
       },
       {
         fieldName: 'color',
@@ -48,11 +52,11 @@ export default class ListProduct extends Component {
     const { updateProduct } = this
     if(component) {
       const CellView = component
-      const fieldName = field.fieldName
+      const { fieldName, maxLength, required } = field
       const updateCell = (value) => {
         return updateProduct(rowId, {[fieldName]: value})
       }
-      const props = { value, colors, updateCell }
+      const props = { value, colors, updateCell, maxLength, required }
       return <CellView {...props} />
     }
     return <div> { value }</div>

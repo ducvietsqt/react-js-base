@@ -8,21 +8,18 @@ export default function RowDetail(props) {
     const { colors = [] } = props
     if(component) {
       const CellView = component
-      const fieldName = field.fieldName
+      const { fieldName, maxLength, required } = field
       const updateCell = (value) => {
         return updateProduct(rowId, {[fieldName]: value})
       }
-      const props = { value, colors, updateCell }
+      const props = { value, colors, updateCell, maxLength, required }
       return <CellView {...props} />
     }
     return <div> { value }</div>
   }
   const initOpen = Object.keys(row).length > 0
-  const [openDrawer, toggleDrawer] = useState(initOpen)
   let cls = 'drawer-detail'
   cls = initOpen ? `${cls} drawer-detail--open` : cls
-  console.error({initOpen, openDrawer, cls})
-
   return (
     <div className={cls}>
       <div className="drawer-detail--content">

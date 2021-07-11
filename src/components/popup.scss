@@ -36,16 +36,18 @@
       border-bottom: solid 1px rgba(0,0,0,0.05);
       text-align: left;
       line-height: 1.3em;
+      padding: 0px 10px;
       .label {
         width: 200px;
         padding: 8px 10px;
         font-weight: bold;
-        font-size: 12px;
+        font-size: 10px;
       }
       .content {
         padding: 8px 10px;
         text-align: justify;
-        width: calc(100% - 300px);
+        width: calc(100% - 200px);
+        font-size: 12px;
       }
     }
   }
