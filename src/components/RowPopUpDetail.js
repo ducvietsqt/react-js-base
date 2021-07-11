@@ -1,5 +1,4 @@
 import './popup.scss'
-import { useState } from 'react'
 export default function RowDetail(props) {
   const {rowDetail = {}, updateProduct, closeDetail} = props
   const {row = {}, fields = []} = rowDetail
@@ -10,7 +9,7 @@ export default function RowDetail(props) {
       const CellView = component
       const { fieldName, maxLength, required } = field
       const updateCell = (value) => {
-        return updateProduct(rowId, {[fieldName]: value})
+        return updateProduct(rowId, {[fieldName]: value}, false)
       }
       const props = { value, colors, updateCell, maxLength, required }
       return <CellView {...props} />

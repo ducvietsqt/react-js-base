@@ -54,7 +54,7 @@ $colorBorder: rgba(0, 0, 0, 0.05);
   }
   .list-color {
     position: absolute;
-    //width: 250px;
+    width: 200px;
     left: 0px;
     top: 100%;
     z-index: 9;
@@ -76,8 +76,8 @@ $colorBorder: rgba(0, 0, 0, 0.05);
         border-radius: 100%;
       }
       .color-label {
-        width: calc(100% - 25px);
-        padding: 0px 5px;
+        width: calc(100% - 45px);
+        padding: 0px 5px 0px 20px;
         text-align: left;
         font-size: 10px;
       }
@@ -123,7 +123,26 @@ $colorBorder: rgba(0, 0, 0, 0.05);
   align-items: center;
 }
 .err-mess {
-  font-size: 8px;
+  font-size: 10px;
   color: red;
   display: block;
+  transform: translateY(3px);
+}
+
+
+.pages-list {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  .page-item {
+    width: 25px;
+    height: 20px;
+    border: solid 1px #101052;
+    margin: 0px 2px;
+    cursor: pointer;
+    &.page-item--active {
+      background: #101052;
+      color: white;
+    }
+  }
 }

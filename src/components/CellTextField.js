@@ -32,19 +32,25 @@ export default function CellTextField(props) {
       valid, msg
     }
   }
-  const onBlur = (e) => {
+  const saveField = (text = '') => {
+    const {valid, msg} = validationField(text)
+    setMsg(msg)
+    if (!valid) {
+      return
+    }
+    updateCell(text)
     setEditable(false)
-    setMsg('')
+  }
+  const onBlur = (e) => {
+    const text = e.target.value
+    saveField(text)
+    // setEditable(false)
+    // setMsg('')
   }
   const onKeyDown = (e) => {
     if (e.key === 'Enter') {
       const text = e.target.value
-      const {valid, msg} = validationField(text)
-      if (!valid) {
-        return setMsg(msg)
-      }
-      updateCell(text)
-      setEditable(false)
+      saveField(text)
     }
   }
   return (
