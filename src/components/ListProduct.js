@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import './products.scss'
 import CellThumbnail from './CellThumbnail'
 import CellColor from './CellColor'
+import CellTextField from './CellTextField'
+import LinkOpenDetail from './LinkOpenDetail'
 
 export default class ListProduct extends Component {
   static defaultProps = {
@@ -24,10 +26,12 @@ export default class ListProduct extends Component {
       {
         fieldName: 'name',
         label: 'Product Name',
+        component: CellTextField,
       },
       {
         fieldName: 'sku',
         label: 'SKU',
+        component: CellTextField,
       },
       {
         fieldName: 'color',
@@ -53,12 +57,18 @@ export default class ListProduct extends Component {
     }
     return <div> { value }</div>
   }
+  rowDetail = (row, fields) => {
+    this.props.detailProduct({row, fields})
+  }
   rowsCell = (row = {}) => {
-    const { cellTypeView } = this
+    const { cellTypeView, rowDetail } = this
     const {fields = []} = this.props
-    return fields.map((field) =>
+    return fields.map((field, index) =>
       <td key={`${row.id}-${field.fieldName}`}>
-        {cellTypeView(field, row[field.fieldName], row.id)}
+        <div className="flex">
+          {cellTypeView(field, row[field.fieldName], row.id)}
+          { index === 0 && <LinkOpenDetail click={() => rowDetail(row, fields)}/>}
+        </div>
       </td>
     )
   }
@@ -94,4 +104,5 @@ ListProduct.propTypes = {
   fields: PropTypes.array,
   colors: PropTypes.array,
   updateProduct: PropTypes.func,
+  detailProduct: PropTypes.func,
 }
