@@ -1,22 +1,38 @@
 const initialState = {
   items: [],
-  item: {}
+  colors: [],
 }
 export default function (state = initialState, action) {
-  console.log(action);
   switch (action.type) {
-    case 'FETCH_POST':
+    case 'FETCH_PRODUCT':
       return {
         ...state,
         items: [...action.payload]
       }
-      break;
-    case 'NEW_POST':
+    case 'INITIALIZE_PRODUCT':
       return {
         ...state,
-        item: action.payload
+        items: [...action.payload]
       }
-      break;
+    case 'INITIALIZE_COLORS':
+      return {
+        ...state,
+        colors: [...action.payload]
+      }
+    case 'UPDATE_PRODUCT':
+      const { productId, data } = action.payload
+      let items = state.items
+      const pos = items.findIndex((item) => item.id === productId)
+      if(pos >= 0) {
+        items[pos] = {
+          ...items[pos],
+          ...data,
+        }
+      }
+      return {
+        ...state,
+        items: [...items],
+      }
     default:
       return state;
   }

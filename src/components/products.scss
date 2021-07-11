@@ -1,0 +1,74 @@
+$colorBorder: rgba(0, 0, 0, 0.05);
+.container {
+  padding: 10px 15px;
+}
+
+.table-products {
+  border-spacing: 0px;
+  border-left: solid 1px $colorBorder;
+  border-top: solid 1px $colorBorder;
+
+  tr {
+    td, th {
+      padding: 5px 10px;
+      font-size: 10px;
+      border-right: solid 1px $colorBorder;
+      border-bottom: solid 1px $colorBorder;
+    }
+    th {
+      font-size: 12px;
+      padding: 10px;
+    }
+  }
+}
+
+.image-cell {
+  img {
+    display: block;
+    max-width: 100px;
+
+  }
+}
+
+.color-cell {
+  position: relative;
+  cursor: pointer;
+  border: solid 1px $colorBorder;
+  .color-cell--value {
+    height: 20px;
+    //width: 20px;
+    //border-radius: 100%;
+  }
+  .list-color {
+    position: absolute;
+    //width: 250px;
+    top: 0;
+    left: 100%;
+    z-index: 9;
+    border: solid 1px $colorBorder;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.6);
+    .color-cell--item {
+      border-bottom: solid 1px $colorBorder;
+      //margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      padding: 5px 5px;
+      background: #e3dede;
+      &:hover {
+        background: $colorBorder;
+      }
+      .color-point {
+        width: 15px;
+        height: 15px;
+      }
+      .color-label {
+        width: calc(100% - 15px);
+        padding: 0px 5px;
+        text-align: left;
+        font-size: 10px;
+      }
+    }
+
+  }
+
+}
