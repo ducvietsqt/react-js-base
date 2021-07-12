@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 export default function CellTextField(props) {
-  const {value, maxLength, required, updateCell} = props
+  const {value, maxLength, updateCell} = props
   const [editable, setEditable] = useState(false)
   const [msg, setMsg] = useState('')
   const validationField = (value) => {
@@ -61,7 +61,8 @@ export default function CellTextField(props) {
                             defaultValue={value}
                             onBlur={onBlur}
                             onKeyDown={onKeyDown}
-                            type="text"/> || value}
+                            type="text"/>}
+        {!editable && value}
         {msg && <label className="err-mess">{msg}</label>}
       </div>
       <div className="icon-edit" onClick={() => setEditable(!editable)}>
