@@ -140,6 +140,7 @@ $colorBorder: rgba(0, 0, 0, 0.05);
     border: solid 1px #101052;
     margin: 0px 2px;
     cursor: pointer;
+    text-align: center;
     &.page-item--active {
       background: #101052;
       color: white;

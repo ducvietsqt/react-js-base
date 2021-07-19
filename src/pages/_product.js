@@ -1,7 +1,5 @@
-const Product = () => {
-  console.error(process.env)
+export default function Product() {
   return (
     <div>Product Detail</div>
   )
 }
-export default Product

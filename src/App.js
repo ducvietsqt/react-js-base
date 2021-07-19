@@ -2,14 +2,12 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom'
 
-import Route from './routes'
-import Header from './components/Header'
+import Routes from './routes'
 function App() {
   return (
     <div id="app">
       <Router>
-        <Header />
-        <Route />
+        <Routes />
       </Router>
     </div>
   )
