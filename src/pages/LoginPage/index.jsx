@@ -13,8 +13,11 @@ class LoginPage extends Component {
   render() {
     return (
       <div>
-        login Page
+        <h1>
+          Day la login PAGE
+        </h1>
       </div>
     )
   }
 }
+export default LoginPage;

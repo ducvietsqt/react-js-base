@@ -1,14 +1,9 @@
-import {
-  BrowserRouter as Router,
-} from 'react-router-dom'
+import RouterLayout from "./layouts/RouterLayout";
 
-import Routes from './routes'
 function App() {
   return (
     <div id="app">
-      <Router>
-        <Routes />
-      </Router>
+      <RouterLayout/>
     </div>
   )
 }

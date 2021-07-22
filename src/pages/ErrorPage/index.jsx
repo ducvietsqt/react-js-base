@@ -4,6 +4,7 @@
 //   )
 // }
 import React, {Component} from "react";
+import Header from "../../components/Header";
 
 class PageNotFound extends Component {
   constructor(props) {
@@ -12,8 +13,9 @@ class PageNotFound extends Component {
   render() {
     return (
       <div>
+        <Header/>
         <p>
-          sssssssssssssssssssssssssssss
+          Page not found!
         </p>
       </div>
     )

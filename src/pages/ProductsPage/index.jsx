@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import {fetchProducts, fetchColors} from "../api/product";
-import ListProduct from '../components/ListProduct'
-import RowPopUpDetail from '../components/RowPopUpDetail'
-import Paginate from '../components/Paginate'
+import {fetchProducts, fetchColors} from "../../api/product";
+import ListProduct from '../../components/ListProduct'
+import RowPopUpDetail from '../../components/RowPopUpDetail'
+import Paginate from '../../components/Paginate'
 import {connect} from "react-redux";
 
 class Products extends Component {
