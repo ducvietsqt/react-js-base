@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { DefaultLayout } from './default'
+import { DefaultLayout } from './DefaultLayout/default'
 import {  AuthLayout } from './auth'
 import {  AppLayout } from './app'
 export {
@@ -16,5 +16,3 @@ export default function withLayout(View, Layout) {
     }
   }
 }
-
-
