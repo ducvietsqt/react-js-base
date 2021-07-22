@@ -17,7 +17,7 @@ export default function () {
       <Switch>
         <Route path="/products" component={withLayout(Products, AppLayout)}/>
         <Route path="/products/:id" component={withLayout(Product, AppLayout)} />
-        <Route path="*" component={<PageNotFound />}/>
+        <Route path="*" component={PageNotFound}/>
       </Switch>
     </div>
   )
