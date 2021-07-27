@@ -1,6 +1,6 @@
 import React from 'react'
 import {Route, Router, Switch} from "react-router-dom";
-import {appRoutes, defaultRoutes, authRoutes} from "../../routes";
+import {appRoutes, authRoutes, defaultRoutes} from "../../routes";
 import AuthLayout from "../AuthLayout";
 import DefaultLayout from "../DefaultLayout";
 import AppLayout from "../AppLayout";
@@ -39,11 +39,11 @@ const RouterLayout = () => {
           <Route exact path={authPath}>
             <AuthLayout/>
           </Route>
-          <Route exact path={defaultPath}>
-            <DefaultLayout/>
-          </Route>
           <Route exact path={appPath}>
             <AppLayout/>
+          </Route>
+          <Route exact path={defaultPath}>
+            <DefaultLayout/>
           </Route>
           <Route exact path="*">
             <PageNotFound/>

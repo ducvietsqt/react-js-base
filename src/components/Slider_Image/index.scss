@@ -1,0 +1,20 @@
+.image-carousel {
+  position: absolute;
+}
+
+.index-image {
+  opacity: 1;
+  z-index: 2;
+}
+
+.index-image-fade {
+  opacity: 1;
+  transition: opacity 1.5s ease-in;
+  z-index: 3
+}
+
+.slider-image{
+  .index-image-fade {
+    opacity: 0;
+  }
+}

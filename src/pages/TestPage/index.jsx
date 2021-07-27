@@ -1,19 +1,18 @@
 import React, {Component} from "react";
 
-class HomePage extends Component {
+class TestPage extends Component {
   // constructor(props) {
   //   super(props);
   // }
-
   render() {
     return (
       <div>
-        <h1>
-          Day la home page
-        </h1>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
       </div>
     )
   }
 }
 
-export default HomePage;
+export default TestPage;

@@ -1,0 +1,42 @@
+.input-element {
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+
+  .input-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+    pointer-events: none;
+    transition: all .175s ease-out;
+    padding-left: 7px;
+    color: rgba(40, 44, 52, 0.5);
+  }
+
+  .input-text {
+    flex: 1;
+  }
+}
+
+.onChange {
+  .input-label {
+    transform: translateY(-15px);
+    font-size: 12px;
+  }
+  .input-type {
+    padding-top: 12px;
+  }
+}
+
+.input-type {
+  border: 0;
+  outline: 0;
+  background: #fafafa;
+  height: 32px;
+  padding-left: 7px;
+  width: 100%;
+}
+
+

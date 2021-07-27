@@ -4,6 +4,7 @@ const LoginPage = lazy(() => import("../pages/LoginPage"));
 const Product = lazy(() => import("../pages/ProductsPage"));
 const SignIn = lazy(() => import("../pages/SigninPage"));
 const HomePage = lazy(() => import("../pages/HomePage"));
+const TestPage = lazy(() => import("../pages/TestPage"));
 
 const authRoutes = [
   {
@@ -31,6 +32,11 @@ const defaultRoutes = [
     path: '/signIn',
     exact: true,
     main: () => <SignIn/>,
+  },
+  {
+    path: '/testPage',
+    exact: true,
+    main: () => <TestPage/>,
   },
 ]
 

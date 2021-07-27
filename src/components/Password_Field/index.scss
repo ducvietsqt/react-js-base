@@ -1,0 +1,14 @@
+.password-flex--r {
+  display: none;
+}
+
+.showPassword-button {
+  opacity: .7;
+  border: 0;
+  padding: 8px 10px;
+  background: white;
+}
+
+div.onChange + div.password-flex--r {
+  display: unset;
+}
