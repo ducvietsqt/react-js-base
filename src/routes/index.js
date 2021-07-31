@@ -38,6 +38,9 @@ const defaultRoutes = [
     exact: true,
     main: () => <TestPage/>,
   },
+  {
+
+  }
 ]
 
 export {appRoutes, defaultRoutes, authRoutes};

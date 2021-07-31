@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import "./index.scss"
 
-class Slider_Image extends Component{
+class SliderImage extends Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,7 @@ class Slider_Image extends Component{
 
   componentDidMount() {
     let imageLength = this.props.imageUrl.length;
-    const myVar = setInterval(this.myTimer, 2000, imageLength);
+    setInterval(this.myTimer, 2000, imageLength);
   }
 
   myTimer = (length) => {
@@ -28,7 +28,7 @@ class Slider_Image extends Component{
           this.props.imageUrl.map((value, index) =>
             <img className={"image-carousel " + (index === this.state.indexSet[0] ? "index-image-fade" : "")
             + (index === this.state.indexSet[1] ? "index-image" : "")}
-                 src={value}/>
+                 src={value} alt=""/>
           )
         }
       </div>
@@ -36,4 +36,4 @@ class Slider_Image extends Component{
   }
 }
 
-export default Slider_Image;
+export default SliderImage;

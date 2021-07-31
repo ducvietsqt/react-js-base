@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 import PropTypes from 'prop-types';
 
-class Input_field extends React.Component {
+class InputField extends React.Component {
   // constructor(props) {
   //   super(props);
   // }
@@ -32,9 +32,9 @@ class Input_field extends React.Component {
     )
   }
 }
-export default Input_field;
+export default InputField;
 
-Input_field.propTypes = {
+InputField.propTypes = {
   text: PropTypes.string,
   type: PropTypes.string,
 }

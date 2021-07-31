@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import {logIn} from "../../api/laravel_api";
 import "./index.scss";
-import Input_field from "../../components/Input_Field";
-import Password_field from "../../components/Password_Field";
-import Slider_Image from "../../components/Slider_Image";
+import InputField from "../../components/Input_Field";
+import PasswordField from "../../components/Password_Field";
+import SliderImage from "../../components/Slider_Image";
 
 class LoginPage extends Component {
   constructor(props) {
@@ -43,7 +43,7 @@ class LoginPage extends Component {
     return (
       <div className="login-page">
         <div className="iphone-background">
-          <Slider_Image imageUrl = {this.state.imageUrl}/>
+          <SliderImage imageUrl = {this.state.imageUrl}/>
         </div>
         <div>
           <div className='input-login'>
@@ -51,8 +51,8 @@ class LoginPage extends Component {
               <h1>Web VIP Pro</h1>
             </div>
             <div id='login-element'>
-              <Input_field text="Nhập tên"/>
-              <Password_field text="Nhập password vào"/>
+              <InputField text="Nhập tên"/>
+              <PasswordField text="Nhập password vào"/>
               <div>
                 <button type="disabled" className="default-button button-login" onClick={onLogin}>Log in</button>
               </div>
@@ -65,8 +65,8 @@ class LoginPage extends Component {
               </div>
               <div>
                 <button className="default-button button-login-facebook" type="button">
-                  <img>
-                  </img>
+                  {/* <img>
+                  </img> */}
                   <span>Đăng nhập bằng phắc búc </span>
                 </button>
               </div>
