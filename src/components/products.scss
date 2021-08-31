@@ -1,0 +1,149 @@
+$colorBorder: rgba(0, 0, 0, 0.05);
+.container {
+  padding: 10px 15px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.table-products {
+  border-spacing: 0px;
+  border-left: solid 1px $colorBorder;
+  border-top: solid 1px $colorBorder;
+  margin: auto;
+  tr {
+    &:hover {
+      background: $colorBorder;
+      td {
+        .link-open {
+          opacity: 1;
+        }
+      }
+    }
+    td, th {
+      padding: 5px 10px;
+      font-size: 10px;
+      border-right: solid 1px $colorBorder;
+      border-bottom: solid 1px $colorBorder;
+    }
+    th {
+      font-size: 12px;
+      padding: 10px;
+      text-align: left;
+    }
+  }
+}
+
+.image-cell {
+  img {
+    display: block;
+    max-width: 100px;
+
+  }
+}
+
+.color-cell {
+  position: relative;
+  cursor: pointer;
+
+  .color-cell--value {
+    height: 20px;
+    width: 20px;
+    border: solid 1px $colorBorder;
+    border-radius: 100%;
+  }
+  .list-color {
+    position: absolute;
+    width: 200px;
+    left: 0px;
+    top: 100%;
+    z-index: 9;
+    border: solid 1px $colorBorder;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.6);
+    .color-cell--item {
+      border-bottom: solid 1px $colorBorder;
+      //margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      padding: 5px 5px;
+      background: #e3dede;
+      &:hover {
+        background: #ffffff;
+      }
+      .color-point {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+      }
+      .color-label {
+        width: calc(100% - 45px);
+        padding: 0px 5px 0px 20px;
+        text-align: left;
+        font-size: 10px;
+      }
+    }
+
+  }
+
+}
+
+.cell--text-field {
+  //border: solid 1px red;
+  position: relative;
+  text-align: left;
+  padding: 5px 20px 5px 0px;
+  width: 200px;
+  word-break: break-word;
+  &:hover {
+    .icon-edit {
+      opacity: 1;
+    }
+  }
+  .icon-edit {
+    cursor: pointer;
+    width: 15px;
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    opacity: 0;
+  }
+  .input-field {
+    display: block;
+    padding: 5px 10px;
+  }
+}
+.link-open {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: 0;
+  margin-left: 10px;
+  //border: solid 1px red;
+  display: flex;
+  align-items: center;
+}
+.err-mess {
+  font-size: 10px;
+  color: red;
+  display: block;
+  transform: translateY(3px);
+}
+
+
+.pages-list {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  .page-item {
+    width: 25px;
+    height: 20px;
+    border: solid 1px #101052;
+    margin: 0px 2px;
+    cursor: pointer;
+    text-align: center;
+    &.page-item--active {
+      background: #101052;
+      color: white;
+    }
+  }
+}

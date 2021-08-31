@@ -1,0 +1,18 @@
+$colorBorder: rgba(0, 0, 0, 0.05);
+.header-app {
+  border-bottom: solid 1px $colorBorder;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  .text-link {
+    text-decoration: none;
+  }
+  .fl {
+    margin: 0px 10px;
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+}
